@@ -1,0 +1,25 @@
+#red_cube{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0px;
+    background: red;
+    width: 700px;
+    height: 700px;
+}
+
+#green_cube{
+    margin: auto;
+    position: absolute;
+    top: 1200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: green;
+    width: 700px;
+    height: 700px;
+}
