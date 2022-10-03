@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets_portfolio/style.css">
+    <script src="https://kit.fontawesome.com/2b0c8d2388.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!---------------home--------------->
+
     <div id="header">
         <div class="container">
             <nav>
-                <img src="assets_portfolio/img/" alt="logo"> <!--0x0ff666_0x5-->
+                <img src="assets_portfolio/img/logo.png" alt="logo"> <!--0x0ff666_0x5-->
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portoflio</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -31,35 +34,32 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="assets_portfolio/img/user.png" alt="">  <!--0x0ff666_0x5-->
+                    <img src="assets_portfolio/img/user.png" alt=""> 
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title"><span>~$</span> whoami</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla 
-                        mollis tellus, nec finibus neque pellentesque ac. Aliquam volutpat posuere elit ac tincidunt. 
-                        Aliquam faucibus eros augue, id dapibus ex suscipit vel. Maecenas augue metus, mattis vel tincidunt 
-                        sollicitudin, sollicitudin ac eros. Praesent in nisi enim. In quis lacinia eros. Fusce vel sapien urna. 
-                        Curabitur elementum venenatis nulla, ac vehicula justo malesuada eget. Nullam commodo dolor et laoreet tincidunt. </p>
+                    <p>Name's Vinny, AKA "0x0666.0x5", or just "V". I'm a Computer Science Student at Catholic University of Pernambuco and a Cybersecurity Consultant Intern at Tempest Security Intelligence.
+                        I work with Web Pentesting and study Threat Intelligence and APT Development.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Pentest</span><br> Web App hacking</li>
+                            <li><span>Web Pentest</span><br> Web App hacking</li>
                             <li><span>Threat Intel</span><br> Threat Intelligence Analysis</li>
                             <li><span>Malware Development</span><br> Malware/APT's Development</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>2022 - Current</span><br> Security Consultant Intern at 
                                 Tempest Security Intelligence</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2020 - Current</span><br> B.Comp.Sc. at Catholic University of Pernambuco</li>
                         </ul>
@@ -68,5 +68,40 @@
             </div>
         </div>
     </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<!---------------contact--------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"><span>~$</span> ping me</h1>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/0x0666_0x5"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/vinicius-ramos-c-l%C3%B4bo-p-pess%C3%B4a-81a0a31ab/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
